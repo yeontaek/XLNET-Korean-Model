@@ -1,5 +1,4 @@
 # XLNET-Korean-Model
-This is a repository of Korean XLNET model with SentencePiece tokenizer.
 
 * XLNET-Base, Korean Model : 12-layer, 768-hidden, 12-heads
 * XLNET-Large, Korean Model: 24-layer, 1024-hidden, 16-heads
