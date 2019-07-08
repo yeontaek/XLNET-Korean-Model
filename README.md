@@ -97,6 +97,8 @@ BERT Model 성능 평가는 한국어 SQuAD Task [KorQuAD](https://korquad.githu
 
 
 <br>
+
+
 ## 기타
 해당 모델은 한국어 Pre-training 모델 연구와 실험을 위한 한국어 XLNET Model입니다. 모델 사용시 반드시 출처를 밝혀주시길 바랍니다.
 <br>
