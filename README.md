@@ -12,7 +12,7 @@
  
 ```python
 import sentencepiece as spm
-RAW_DATA_FPATH = "total_corpus_20190605.txt"
+RAW_DATA_FPATH = "corpus.txt"
 
 MODEL_PREFIX = "sp10m.cased.v3"
 VOC_SIZE = 32000
