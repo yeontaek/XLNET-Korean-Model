@@ -57,3 +57,33 @@ data_utils.py를 사용하여 <code>.tfrecord</code> 파일 형식으로 변환�
 그러나 최근에 도네 강, 고카이 강 등의 제방의 고기능화에 의해 하천의 범람에 의한 침수 피해는 거의 없어졌다.
 한편 집중호우에 의해 시내의 저지 등에서는 도로가 일부 침수하는 등의 피해가 일어난다.
 ~~~
+
+## Pretraining with XLNet
+학습 데이터는 한국어 위키데이터(2019.01 dump file, 약 350만 문장) 을 사용하여 학습을 진행하였으며, 모델의 하이퍼파라미터는 논문과 동일하게 사용하였습니다.
+
+```python
+python train.py
+  --record_info_dir=$DATA/tfrecords \
+  --train_batch_size=2048 \
+  --seq_len=512 \
+  --reuse_len=256 \
+  --mem_len=384 \
+  --perm_size=256 \
+  --n_layer=24 \
+  --d_model=1024 \
+  --d_embed=1024 \
+  --n_head=16 \
+  --d_head=64 \
+  --d_inner=4096 \
+  --untie_r=True \
+  --mask_alpha=6 \
+  --mask_beta=1 \
+  --num_predict=85
+```   
+<br>
+
+
+
+
+
+
