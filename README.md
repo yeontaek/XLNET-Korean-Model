@@ -78,7 +78,7 @@ python train.py
   —d_model=768 \
   —d_embed=768 \
   —n_head=12 \
-  —d_head=48 \
+  —d_head=64 \
   —d_inner=3072 \
   —untie_r=True \
   —mask_alpha=6 \
