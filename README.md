@@ -66,7 +66,7 @@ data_utils.py를 사용하여 <code>.tfrecord</code> 파일 형식으로 변환�
 <br>
 총 학습 step은 논문과 동일하게 50만 step 진행하였습니다.
 
-```python
+```
 python train.py
   —record_info_dir=$DATA/tfrecords \
   —train_batch_size=64 \
@@ -116,6 +116,8 @@ python run_korquad.py \
 2. KorQuAD 학습
 
 
+<br>
+<br>
 
 ## 성능 평가  
 
