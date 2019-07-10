@@ -68,24 +68,24 @@ data_utils.py를 사용하여 <code>.tfrecord</code> 파일 형식으로 변환�
 
 ```
 python train.py
-  —record_info_dir=$DATA/tfrecords \
-  —train_batch_size=64 \
-  —seq_len=512 \
-  —reuse_len=256 \
-  —mem_len=384 \
-  —perm_size=256 \
-  —n_layer=12 \
-  —d_model=768 \
-  —d_embed=768 \
-  —n_head=12 \
-  —d_head=64 \
-  —d_inner=3072 \
-  —untie_r=True \
-  —mask_alpha=6 \
-  —mask_beta=1 \
-  —num_predict=85 \
-  -train_steps=500000 \
-  -save_steps=100000
+  -—record_info_dir=$DATA/tfrecords \
+  -—train_batch_size=64 \
+  -—seq_len=512 \
+  -—reuse_len=256 \
+  -—mem_len=384 \
+  -—perm_size=256 \
+  -—n_layer=12 \
+  -—d_model=768 \
+  -—d_embed=768 \
+  -—n_head=12 \
+  -—d_head=64 \
+  -—d_inner=3072 \
+  -—untie_r=True \
+  -—mask_alpha=6 \
+  -—mask_beta=1 \
+  -—num_predict=85 \
+  --train_steps=500000 \
+  --save_steps=100000
 ```   
 <br>
 
