@@ -97,7 +97,7 @@ flags.DEFINE_bool("use_korquad", default= True, help="True when using Korquad, F
 ```  
 <br>
 
-1. KorQuAD 사전 데이터 준비
+1. KorQuAD 사전 데이터 준비<br>
 XLNET은 BERT와는 다르게 KorQuAD train 데이터를 이용해 tfrecord 파일을 만드는 전처리 과정이 필요합니다. 아래 스크립트를 실행하게 되면 <code>sp10m.cased.v3.model.0.slen-512.qlen-64.train.tf_record</code> 파일이 생성됩니다. 
 
 ```
