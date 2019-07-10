@@ -121,10 +121,8 @@ python run_korquad.py \
 
 ## 성능 평가  
 
-| Model | F1(Dev Set 기준) |
+| Model | F1(KorQuAD Dev Set 기준) |
 |:---:|:---:|
-| BiDAF (single) | 83% |
-| DocQA (single) | 85.91% |
 | BERT-Base, Multilingual Cased (single) | 89.9% |
 | **BERT-Base, Korean Model(our model)** | 87.8% |
 | **BERT-Large, Korean Model(our model)** | 00% |
