@@ -94,6 +94,24 @@ flags.DEFINE_bool("korquad", default= True, help="True when using Korquad, False
 ```  
 
 
+1. KorQuAD 사전 데이터 준비
+
+
+
+```python
+SQUAD_DIR=data/squad
+OUTPUT_DIR = data/output
+
+python run_korquad.py \
+  --use_tpu=False \
+  --do_prepro=True \
+  --spiece_model_file=${INIT_CKPT_DIR}/sp10m.cased.v3.model \
+  --train_file=${SQUAD_DIR}/KorQuAD_v1.0_train.json \
+  --output_dir=${OUTPUT_DIR} \
+  --uncased=False \
+  --max_seq_length=512 \
+```
+
 
 ## 성능 평가  
 XLNET Model 성능 평가는 한국어 SQuAD Task [KorQuAD](https://korquad.github.io/)로 평가하였습니다. 성능 결과는 아래와 같습니다.   
