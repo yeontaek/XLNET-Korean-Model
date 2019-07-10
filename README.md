@@ -33,6 +33,7 @@ SPM_COMMAND = ('--input={} '
 #sentencePiece 학습 시작
 spm.SentencePieceTrainer.Train(SPM_COMMAND)
 ```   
+<br>
 
 ## 사전 학습 데이터 준비  
 data_utils.py를 사용하여 <code>.tfrecord</code> 파일 형식으로 변환하였습니다. BERT 모델과 마찬가지로 학습 데이터의 구성은 한 줄에 한 문장씩 구성하고 Document 사이에는 빈 줄을 삽입할 것을 권장하고 있습니다. XLNET에서는 선택사항으로 특정 문장의 끝에 \<eop\> 토큰을 삽입하여 해당 문장이 단락 끝임을 표시하는 토큰을 넣을 수 있습니다. 그러나 본 모델에서는 해당 토큰을 사용하지 않고 한국어 BERT Model 학습시 사용했던 wiki 문서를 동일하게 사용했습니다. 
@@ -57,6 +58,7 @@ data_utils.py를 사용하여 <code>.tfrecord</code> 파일 형식으로 변환�
 그러나 최근에 도네 강, 고카이 강 등의 제방의 고기능화에 의해 하천의 범람에 의한 침수 피해는 거의 없어졌다.
 한편 집중호우에 의해 시내의 저지 등에서는 도로가 일부 침수하는 등의 피해가 일어난다.
 ~~~
+<br>
 
 ## Pretraining with XLNet
 학습 데이터는 **한국어 위키데이터(2019.01 dump file, 약 350만 문장)** 을 사용하여 학습을 진행하였으며, 모델의 하이퍼파라미터는 Base model에 맞춰서 일부 수정하였습니다.(https://github.com/zihangdai/xlnet/issues/137)
