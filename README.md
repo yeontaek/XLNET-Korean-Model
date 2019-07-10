@@ -88,7 +88,7 @@ python train.py
 <br>
 
 ## KorQuAD Task   
-XLNET Model 성능 평가을 위해 한국어 SQuAD Task [KorQuAD](https://korquad.github.io/)로 평가를 진행하였습니다. XLNET github에는 SQuAD 2.0에 대한 평가 코드가 있어 이를 KorQuAD에 맞춰서 수정했습니다. 아래 KorQuAD 관련 Flag를 하나 추가하였으며, 관련 코드는 <code>run_korquad.py</code>를 참고하시면 되겠습니다. 
+XLNET Model 성능 평가을 위해 한국어 SQuAD Task [KorQuAD](https://korquad.github.io/)로 평가를 진행하였습니다. XLNET github에는 SQuAD 2.0에 대한 평가 코드가 있어 이를 KorQuAD에 맞춰서 수정했습니다. 아래 KorQuAD 관련 Flag를 하나 추가하였으며, 관련 코드는 <code>run_korquad.py</code>를 참고하시길 바랍니다. 
 
 ```python
 flags.DEFINE_bool("use_korquad", default= True, help="True when using Korquad, False if not")
@@ -116,7 +116,6 @@ python run_korquad.py \
 
 
 ## 성능 평가  
-XLNET Model 성능 평가는 한국어 SQuAD Task [KorQuAD](https://korquad.github.io/)로 평가하였습니다. 성능 결과는 아래와 같습니다.   
 
 | Model | F1(Dev Set 기준) |
 |:---:|:---:|
