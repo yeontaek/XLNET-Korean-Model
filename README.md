@@ -61,10 +61,10 @@ data_utils.py를 사용하여 <code>.tfrecord</code> 파일 형식으로 변환�
 ~~~
 
 ## Pretraining with XLNet
-학습 데이터는 **한국어 위키데이터(2019.01 dump file, 약 350만 문장)** 을 사용하여 학습을 진행하였으며, 모델의 하이퍼파라미터는 base model에 맞춰서 수정하였습니다.(https://github.com/zihangdai/xlnet/issues/137)
+학습 데이터는 **한국어 위키데이터(2019.01 dump file, 약 350만 문장)** 을 사용하여 학습을 진행하였으며, 모델의 하이퍼파라미터는 Base model에 맞춰서 일부 수정하였습니다.(https://github.com/zihangdai/xlnet/issues/137)
 <br>
 <br>
-학습 step은 논문과 동일하게 50만 step을 진행하였습니다.
+총 학습 step은 논문과 동일하게 50만 step 진행하였습니다.
 
 ```python
 python train.py
@@ -98,7 +98,7 @@ flags.DEFINE_bool("use_korquad", default= True, help="True when using Korquad, F
 <br>
 
 1. KorQuAD 사전 데이터 준비
-XLNET은 BERT와는 다르게 KorQuAD train 데이터를 이용해 tfrecord 파일을 만드는 전처리 과정이 필요합니다. 
+XLNET은 BERT와는 다르게 KorQuAD train 데이터를 이용해 tfrecord 파일을 만드는 전처리 과정이 필요합니다. 아래 스크립트를 실행하게 되면 <code>sp10m.cased.v3.model.0.slen-512.qlen-64.train.tf_record</code> 파일이 생성됩니다. 
 
 ```python
 SQUAD_DIR=data/squad
