@@ -88,14 +88,15 @@ python train.py
 <br>
 
 ## KorQuAD Task   
-XLNET Model 성능 평가을 위해 한국어 SQuAD Task [KorQuAD](https://korquad.github.io/)로 평가를 진행하였습니다. XLNET github에는 SQuAD 2.0에 대한 평가 코드가 있어 이를 KorQuAD Task에 맞춰서 수정했습니다. 아래 KorQuAD 관련 Flag를 하나 추가하였으며, 관련 코드는 github에 첨부하였습니다. 
+XLNET Model 성능 평가을 위해 한국어 SQuAD Task [KorQuAD](https://korquad.github.io/)로 평가를 진행하였습니다. XLNET github에는 SQuAD 2.0에 대한 평가 코드가 있어 이를 KorQuAD에 맞춰서 수정했습니다. 아래 KorQuAD 관련 Flag를 하나 추가하였으며, 관련 코드는 <code>run_korquad.py</code>를 참고하시면 되겠습니다. 
+
 ```python
-flags.DEFINE_bool("korquad", default= True, help="True when using Korquad, False if not")
+flags.DEFINE_bool("use_korquad", default= True, help="True when using Korquad, False if not")
 ```  
 <br>
 
 1. KorQuAD 사전 데이터 준비
-
+XLNET은 BERT와는 다르게 KorQuAD train 데이터를 이용해 tfrecord 파일을 만드는 전처리 과정이 필요합니다. 
 
 ```python
 SQUAD_DIR=data/squad
@@ -110,6 +111,8 @@ python run_korquad.py \
   --uncased=False \
   --max_seq_length=512 \
 ```
+2. KorQuAD 학습
+
 
 
 ## 성능 평가  
