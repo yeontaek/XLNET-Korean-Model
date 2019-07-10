@@ -92,10 +92,9 @@ XLNET Model 성능 평가을 위해 한국어 SQuAD Task [KorQuAD](https://korqu
 ```python
 flags.DEFINE_bool("korquad", default= True, help="True when using Korquad, False if not")
 ```  
-
+<br>
 
 1. KorQuAD 사전 데이터 준비
-
 
 
 ```python
