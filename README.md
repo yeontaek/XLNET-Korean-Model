@@ -117,7 +117,7 @@ python run_korquad.py \
 TPU 환경에서 Fine-tuning을 진행했으며, 학습 파라미터는 아래 코드를 참고하시면 되겠습니다. 
 
 * --init_checkpoint = XLNET pretrained 모델의 경로 
-* --output_dir = 전리 과정에서 만든 tfrecord 파일 경로
+* --output_dir = 전처리 과정에서 만든 tfrecord 파일 경로
 * --model_dir = Fine-tuning 과정에서 저장될 checkpoint 경로
 
 ```python
