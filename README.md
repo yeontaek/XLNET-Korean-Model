@@ -113,7 +113,7 @@ python run_korquad.py \
   --uncased=False \
   --max_seq_length=512 \
 ```
-**2. KorQuAD Fine-tuning**
+**2. KorQuAD Fine-tuning** <br>
 TPU 환경에서 Fine-tuning에서 진행했으며 관련 파라미터는 아래 코드를 참고되겠습니다. 
 
 * --init_checkpoint = XLNET pretrained 모델의 경로 
@@ -125,7 +125,6 @@ CONFIG_PATH = BUCKET_PATH + "/xlnet_model/config.json"
 INIT_DIR = BUCKET_PATH+"/xlnet_model/model.ckpt"
 OUTPUT_DIR = BUCKET_PATH+ "/output_file"
 TF_DIR = BUCKET_PATH +"/tfrecord/"
-# TPU name in google cloud
 TPU_NAME= "node-3"
 
 # RUN Pre-Training
