@@ -113,8 +113,59 @@ python run_korquad.py \
   --uncased=False \
   --max_seq_length=512 \
 ```
-**2. KorQuAD 학습**
+**2. KorQuAD Fine-tuning**
+TPU 환경에서 Fine-tuning에서 진행했으며 관련 파라미터는 아래 코드를 참고되겠습니다. 
 
+* --init_checkpoint = XLNET pretrained 모델의 경로 
+* --output_dir = 전리 과정에서 만든 tfrecord 파일 경로
+* --model_dir = Fine-tuning 과정에서 저장될 checkpoint 경로
+
+```python
+CONFIG_PATH = BUCKET_PATH + "/xlnet_model/config.json"
+INIT_DIR = BUCKET_PATH+"/xlnet_model/model.ckpt"
+OUTPUT_DIR = BUCKET_PATH+ "/output_file"
+TF_DIR = BUCKET_PATH +"/tfrecord/"
+# TPU name in google cloud
+TPU_NAME= "node-3"
+
+# RUN Pre-Training
+RUN_CMD = ("python3 run_korquad.py "
+           "--use_tpu=True "
+           "--tpu={} "
+           "--num_hosts=1 "
+           "--num_core_per_host=8 "
+           
+           "--model_config_path={} "
+           "--spiece_model_file=sentence_model/sp10m.cased.v3.model "
+           
+           "--output_dir={} "
+           "--init_checkpoint={} "
+           "--model_dir={} "
+           
+           "--train_file=squad_data/KorQuAD_v1.0_train.json "
+           "--predict_file=squad_data/KorQuAD_v1.0_dev.json "
+           
+           "--uncased=False "
+           "--max_seq_length=512 "
+           "--do_train=True "
+           "--train_batch_size=48 "
+           "--do_predict=True "
+           "--predict_batch_size=32 "
+           "--learning_rate=3e-5 "
+           "--adam_epsilon=1e-6 "
+           "--iterations=1000 "
+           "--save_steps=1000 "
+           "--train_steps=8000 "
+           "--warmup_steps=1000 ")
+
+RUN_CMD = RUN_CMD.format(TPU_NAME,
+                         CONFIG_PATH,
+			 TF_DIR,
+                         INIT_DIR,
+                         OUTPUT_DIR)
+os.system(RUN_CMD)
+
+```
 
 <br>
 <br>
