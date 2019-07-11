@@ -114,7 +114,7 @@ python run_korquad.py \
   --max_seq_length=512 \
 ```
 **2. KorQuAD Fine-tuning** <br>
-TPU 환경에서 Fine-tuning에서 진행했으며 관련 파라미터는 아래 코드를 참고되겠습니다. 
+TPU 환경에서 Fine-tuning을 진행했으며, 학습 파라미터는 아래 코드를 참고하시면 되겠습니다. 
 
 * --init_checkpoint = XLNET pretrained 모델의 경로 
 * --output_dir = 전리 과정에서 만든 tfrecord 파일 경로
