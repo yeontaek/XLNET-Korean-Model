@@ -73,10 +73,10 @@ python train.py
   -—reuse_len=256 \
   -—mem_len=384 \
   -—perm_size=256 \
-  -—n_layer=12 \
+  -—n_layer=6 \
   -—d_model=768 \
   -—d_embed=768 \
-  -—n_head=12 \
+  -—n_head=6 \
   -—d_head=64 \
   -—d_inner=3072 \
   -—untie_r=True \
