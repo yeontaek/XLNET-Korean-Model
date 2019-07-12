@@ -184,7 +184,7 @@ os.system(RUN_CMD)
 | step | F1(KorQuAD Dev Set 기준) |
 |:---:|:---:|
 | 20만 step | 83.21% |
-| 30만 step | 00.00% |
+| 30만 step | 82.08% |
 | 40만 step | 00% |
 | 50만 step | 00% |
 
