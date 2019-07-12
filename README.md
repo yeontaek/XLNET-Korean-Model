@@ -60,7 +60,7 @@ spm.SentencePieceTrainer.Train(SPM_COMMAND)
 <br>
 
 ## Pretraining with XLNet
-학습 데이터는 **한국어 위키데이터(2019.01 dump file, 약 350만 문장)** 을 사용하여 학습을 진행하였으며, 모델의 하이퍼파라미터는 Base model에 맞춰서 일부 수정하였습니다.(https://github.com/zihangdai/xlnet/issues/137)
+학습 데이터는 **한국어 위키데이터(2019.01 dump file, 약 350만 문장)** 을 사용하여 학습을 진행하였으며, 모델의 하이퍼파라미터는 서버 스펙에 맞춰 수정하였습니다.
 <br>
 <br>
 총 학습 step은 논문과 동일하게 50만 step 진행하였습니다.
