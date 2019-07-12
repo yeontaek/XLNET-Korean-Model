@@ -179,7 +179,7 @@ os.system(RUN_CMD)
 
 <br>
 
-## step별 성능 평가  
+## Step별 성능 평가  
 
 | step | F1(KorQuAD Dev Set 기준) |
 |:---:|:---:|
