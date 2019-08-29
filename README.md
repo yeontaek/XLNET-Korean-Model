@@ -168,25 +168,28 @@ os.system(RUN_CMD)
 <br>
 <br>
 
+
+## Step별 성능 평가  
+
+| step | F1(KorQuAD Dev Set 기준) |
+|:---:|:---:|
+| **20만 step** | **83.21%** |
+| 30만 step | 82.08% |
+| 40만 step | 82.13% |
+| 50만 step | 81.38% |
+
+
+<br>
+
 ## 성능 평가  
 
 | Model | F1(KorQuAD Dev Set 기준) |
 |:---:|:---:|
 | BERT-Base, Multilingual Cased (single) | 89.9% |
 | **BERT-Base, Korean Model(our model)** | 87.8% |
-| **BERT-Large, Korean Model(our model)** | 00% |
-| **XLNET-Base, Korean Model(our model)** | 00% |
+| **XLNET-Base, Korean Model(our model)** | 83.21% |
 
 <br>
-
-## Step별 성능 평가  
-
-| step | F1(KorQuAD Dev Set 기준) |
-|:---:|:---:|
-| 20만 step | 83.21% |
-| 30만 step | 82.08% |
-| 40만 step | 82.13% |
-| 50만 step | 81.38% |
 
 
 
