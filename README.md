@@ -193,11 +193,6 @@ os.system(RUN_CMD)
 
 
 
-## 기타
-해당 모델은 한국어 Pre-training 모델 연구와 실험을 위한 한국어 XLNET Model입니다. 모델 사용시 반드시 출처를 밝혀주시길 바랍니다.
-<br>
-<br>
-한국어 XLNET Model 학습이나 모델 사용 관련하여 궁금한 사항이 있으시면 oh31400@naver.com 메일로 문의 부탁립니다. 
-
-
+## Refrence
+https://github.com/zihangdai/xlnet
 
